@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS methodology</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="level1-heading">モジュールの再利用</h1>
+      <h2 class="level2-heading">
+        最小モジュールを利用した複合モジュールの作成
+      </h2>
+      <h4 class="level4-heading">水平ボタンリスト</h4>
+      <ul class="horizontal-btn-list">
+        <li class="horizontal-btn-list__item">
+          <a href="#" class="horizontal-btn-list__btn btn btn--warning">戻る</a>
+        </li>
+        <li class="horizontal-btn-list__item">
+          <a href="#" class="horizontal-btn-list__btn btn">進む</a>
+        </li>
+      </ul>
+      <!-- /.horizontal-btn-list -->
+      <h2 class="level2-heading">最小モジュールと複合モジュールの組み合わせ</h2>
+      <h4 class="level4-heading">ボタン+画像半分サイズメディア</h4>
+      <div class="half-media">
+        <figure class="half-media__img-wrapper">
+          <img
+            src="/assets/img/elements/persona.jpg"
+            alt="PCの写真"
+            class="half-media__img"
+          />
+        </figure>
+        <div class="half-media__body">
+          <h3 class="half-media__title">ユーザーを考えた設計で満足な体験を</h3>
+          <p class="half-media__text">
+            提供するサービスやペルソナによって、webサイトの設計は異なります。サービスやペルソナに合わせた設計を行うことにより、訪問者にストレスのないより良い体験を生み出し、満足を高めることとなります。<br />
+            わたしたちはお客様のサイトにあったユーザビリティを考えるため、分析やヒアリングをきめ細かく実施、満足を体験できるクリエイティブとテクノロジーを設計・構築し、今までにない期待を超えたユーザー体験を提供いたします。
+          </p>
+          <a href="#" class="half-media__button btn btn--arrow-right">
+            戦略策定サービスについて
+          </a>
+        </div>
+      </div>
+      <h4 class="level4-heading">ボタン+CTAエリア</h4>
+      <div class="cta-area">
+        <h2 class="cta-area__title">お気軽にお問い合わせください</h2>
+        <p class="cta-area__text">
+          弊社のサービスや製品のことで気になることがございましたら、お気軽にお問合せください
+        </p>
+        <a href="#" class="btn">問い合わせする</a>
+      </div>
+      <!-- /.cta-area -->
+      <h4 class="level4-heading">ラベル+ポストリスト</h4>
+      <ul class="vertical-post">
+        <li class="vertical-posts__item">
+          <div class="vertical-posts__header">
+            <time class="vertical-posts__date" datetime="2019-03-29"
+              >2019/03/29</time
+            >
+            <ul class="vertical-posts__labels">
+              <li class="vertical-posts__label">
+                <span class="label">海外向けマーケティング</span>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="vertical-posts__title"
+            >【多言語サイトを構築する】①対象言語・地域とURL方式の選定</a
+          >
+        </li>
+        <!-- /.vertical-posts__item -->
+        <li class="vertical-posts__item">
+          <div class="vertical-posts__header">
+            <time class="vertical-posts__date" datetime="2019-03-29"
+              >2019/03/29</time
+            >
+            <ul class="vertical-posts__labels">
+              <li class="vertical-posts__label">
+                <span class="label label--warning">お役立ちツール</span>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="vertical-posts__title"
+            >打合せアポをスムーズに！ビジネスで使える日程調整ツール4選</a
+          >
+        </li>
+        <!-- /.vertical-posts__item -->
+        <li class="vertical-posts__item">
+          <div class="vertical-posts__header">
+            <time class="vertical-posts__date" datetime="2019-03-29"
+              >2019/03/29</time
+            >
+            <ul class="vertical-posts__labels">
+              <li class="vertical-posts__label">
+                <span class="label">海外向けマーケティング</span>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="vertical-posts__title"
+            >BtoB向けコンテンツマーケティング戦略に置けるLinkedIn活用術</a
+          >
+        </li>
+        <!-- /.vertical-posts__item -->
+      </ul>
+      <!-- /.vertical-post -->
+      <h2 class="level2-heading">複合モジュール同士の組み合わせ</h2>
+      <h4 class="level4-heading">FAQ+リスト</h4>
+      <dl class="faq">
+        <dt class="faq__row faq__row--question">
+          <span class="faq__icon faq__icon--question">Q</span>
+          <span class="faq__question-text">
+            どのCMSの開発やCSS設計に対応していますか？
+          </span>
+        </dt>
+        <dd class="faq__row faq__row--answer">
+          <span class="faq__icon faq__icon--answer">A</span>
+          <div class="faq__answer-body">
+            <p class="faq__answer-text">それぞれ以下の開発実績がございます。</p>
+            <ul class="bullet-list">
+              <li class="bullet-list__item">
+                CMS構築
+                <ul class="child-bullet-list">
+                  <li class="child-bullet-list__item">WordPress</li>
+                  <li class="child-bullet-list__item">Movable Type</li>
+                  <li class="child-bullet-list__item">HubSpot</li>
+                  <li class="child-bullet-list__item">Sitecore</li>
+                </ul>
+                <!-- /.child-bullet-list -->
+              </li>
+              <li class="bullet-list__item">
+                CSS設計
+                <ul class="child-bullet-list">
+                  <li class="child-bullet-list__item">BEM</li>
+                  <li class="child-bullet-list__item">FLOCSS</li>
+                  <li class="child-bullet-list__item">PRECSS</li>
+                </ul>
+                <!-- /.child-bullet-list -->
+              </li>
+            </ul>
+          </div>
+        </dd>
+        <!-- /.faq__row faq__row--question -->
+      </dl>
+      <!-- /.faq -->
+      <h4 class="level4-heading">アコーディオン+カード+CTAエリア</h4>
+      <dl class="accordion" id="services">
+        <dt class="accordion__title">
+          <a class="accordion__btn accordion__btn--active" href="#services">
+            サービスのご紹介
+          </a>
+        </dt>
+        <dd class="accordion__body accordion__body--active">
+          <p class="accordion__text">
+            弊社では下記のサービスを主軸とし、これらにまつわる周辺業務も提供しております。
+          </p>
+          <div class="accordion__cards cards cards--col3">
+            <div class="cards__item card">
+              <figure class="card__img-wrapper">
+                <img src="/assets/img/elements/code.jpg" class="card__img" />
+              </figure>
+              <div class="card__body">
+                <h3 class="card__title">webサイト制作</h3>
+                <p class="card__text">
+                  ユーザーにベストな体験を提供するクリエイティブとテクノロジーを作り上げます。
+                </p>
+              </div>
+            </div>
+            <div class="cards__item card">
+              <figure class="card__img-wrapper">
+                <img src="/assets/img/elements/sns.jpg" class="card__img" />
+              </figure>
+              <div class="card__body">
+                <h3 class="card__title">デジタルマーケティング支援</h3>
+                <p class="card__text">
+                  自社のマーケティングを支える最適なデジタルマーケティングツールの導入をサポートします。
+                </p>
+              </div>
+            </div>
+            <div class="cards__item card">
+              <figure class="card__img-wrapper">
+                <img src="/assets/img/elements/report.jpg" class="card__img" />
+              </figure>
+              <div class="card__body">
+                <h3 class="card__title">解析・レポーティング</h3>
+                <p class="card__text">
+                  ユーザー行動を分析し、より良いサイトを作り上げるためのアイデアをご提案します。
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /.accordion__cards cards cards--col3 -->
+          <div class="cta-area">
+            <h2 class="cta-area__title">お気軽にお問い合わせください</h2>
+            <p class="cta-area__text">
+              弊社のサービスや製品のことで気になることがございましたら、お気軽にお問合せください
+            </p>
+            <a href="#" class="btn">問い合わせする</a>
+          </div>
+        </dd>
+      </dl>
+      <!-- /.accordion -->
+    </div>
+    <!-- /.container -->
+    <script src="main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7af24d0126.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
